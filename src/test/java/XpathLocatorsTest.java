@@ -7,5 +7,9 @@ public class XpathLocatorsTest extends BaseTest {
     public void locator() {
         driver.findElement(By.className("btn"));
         driver.findElement(By.id("invite-users-to-chat")); //invite link
+        driver.findElement(By.partialLinkText("Privacy policy"));
+
+
+
     }
 }
