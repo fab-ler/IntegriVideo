@@ -1,13 +1,10 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class XpathLocatorsTest extends BaseTest {
 
     @Test
     public void locator() {
-        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         // invite btn
         driver.findElement(By.id("invite-users-to-chat"));
         //input area
@@ -20,6 +17,8 @@ public class XpathLocatorsTest extends BaseTest {
         driver.findElement(By.xpath("//*[@title='Send message']"));
         // drag'n'drop
         driver.findElement(By.cssSelector(".integri-chat-manual-upload"));
+        //uplod modal
+        driver.findElement(By.cssSelector(".integri-file-upload"));
         // settings
         driver.findElement(By.cssSelector(".integri-chat-settings"));
         // code section
@@ -30,7 +29,7 @@ public class XpathLocatorsTest extends BaseTest {
         driver.findElement(By.name("userName"));
         // input user Email
         driver.findElement(By.name("userEmail"));
-        // input user pic
+        // input user pic or By.xpath("//input[@name='userPic']") или //input[@placeholder='Photo URL']
         driver.findElement(By.name("userPic"));
         // close icon
         driver.findElement(By.className("close-integri-modal"));
@@ -40,5 +39,20 @@ public class XpathLocatorsTest extends BaseTest {
         driver.findElement(By.className("integri-button-blue-inverse"));
         // validate user name
         driver.findElement(By.xpath("//*[@class='integri-session-user-name']"));
+        //video chat btn
+        driver.findElements(By.cssSelector(".integri-chat-start-video.integri-chat-action-button"));
+        // browse button on upload modal
+        driver.findElements(By.cssSelector(".integri-file-upload-manual-init"));
+        //cancel upload btn
+        driver.findElements(By.cssSelector(".integri-file-upload-cancel"));
+        //start upload btn
+        driver.findElements(By.cssSelector(".integri-file-upload-start"));
+        //close upload modal icon
+        driver.findElement(By.cssSelector(".iv-icon-cross"));
+//        //del sent msg icon
+//        driver.findElement(By.cssSelector(".integri-chat-remove-message"));
+//        //edit sent msg icon
+//        driver.findElement(By.cssSelector(".integri-chat-edit-message"));
+//        driver.findElement(By.cssSelector(".integri-chat-message-own"));
     }
 }
