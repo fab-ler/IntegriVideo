@@ -49,10 +49,10 @@ public class XpathLocatorsTest extends BaseTest {
         driver.findElements(By.cssSelector(".integri-file-upload-start"));
         //close upload modal icon
         driver.findElement(By.cssSelector(".iv-icon-cross"));
-//        //del sent msg icon
-//        driver.findElement(By.cssSelector(".integri-chat-remove-message"));
-//        //edit sent msg icon
-//        driver.findElement(By.cssSelector(".integri-chat-edit-message"));
-//        driver.findElement(By.cssSelector(".integri-chat-message-own"));
+   }
+
+    @Test
+    public void runTest() {
+        System.out.println(System.getProperty("userName"));
     }
 }
